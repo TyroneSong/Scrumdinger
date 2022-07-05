@@ -33,22 +33,13 @@ struct CardView: View {
 }
 
 struct CardView_Previews: PreviewProvider {
-    static var scrum0 = DailyScrum.sampleData[0]
-    static var scrum1 = DailyScrum.sampleData[1]
-    static var scrum2 = DailyScrum.sampleData[2]
     static var previews: some View {
         List {
-//            ForEach(DailyScrum.sampleData, id: \Self) { scrum in
-                CardView(scrum: scrum0)
-                    .background(scrum0.theme.mainColor)
+            ForEach(DailyScrum.sampleData) { scrum in
+                CardView(scrum: scrum)
+                    .background(scrum.theme.mainColor)
                     .previewLayout(.fixed(width: 400, height: 60))
-        CardView(scrum: scrum1)
-            .background(scrum1.theme.mainColor)
-            .previewLayout(.fixed(width: 400, height: 60))
-        CardView(scrum: scrum2)
-            .background(scrum2.theme.mainColor)
-            .previewLayout(.fixed(width: 400, height: 60))
-//            }
+            }
         }
     }
 }

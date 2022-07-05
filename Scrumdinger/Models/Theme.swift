@@ -25,6 +25,7 @@ enum Theme: String, CaseIterable, Identifiable, Codable {
     case teal
     case yellow
     
+    /// 视图文本颜色
     var accentColor: Color {
         switch self {
             case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
@@ -32,6 +33,7 @@ enum Theme: String, CaseIterable, Identifiable, Codable {
         }
     }
     
+    /// 视图主题色
     var mainColor: Color {
         Color(rawValue)
     }
