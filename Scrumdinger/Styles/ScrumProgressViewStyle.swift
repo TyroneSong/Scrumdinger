@@ -28,5 +28,4 @@ struct ScrumProgressViewStyle: ProgressViewStyle {
             }
         }
     }
-    
 }
